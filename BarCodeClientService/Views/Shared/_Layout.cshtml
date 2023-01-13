@@ -1,0 +1,397 @@
+﻿<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    @* Bootstap *@
+    <!-- CSS only -->
+    <link href="~/lib/bootstap.5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="~/lib/bootstap.5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    @*<link href="~/css/styles.css" rel="stylesheet" />*@
+    <link href="~/css/CStyle.css" rel="stylesheet" />
+
+    @* Font Awesome 6+ *@
+    <script src="https://kit.fontawesome.com/5743919275.js" crossorigin="anonymous"></script>
+
+    <style>
+        /*@@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap');
+        @@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@100;200&family=Sarabun:wght@100&display=swap');*/
+        /* Reseting */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #ecf0f3;
+        }
+
+        .wrapper {
+            max-width: 350px;
+            min-height: 500px;
+            margin: 80px auto;
+            padding: 40px 30px 30px 30px;
+            background-color: #ecf0f3;
+            border-radius: 15px;
+            box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+        }
+
+        .logo {
+            width: 80px;
+            margin: auto;
+        }
+
+            .logo img {
+                width: 100%;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff;
+            }
+
+        .wrapper .name {
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: 1.3px;
+            padding-left: 10px;
+            color: #555;
+        }
+
+        .wrapper .form-field input {
+            width: 100%;
+            display: block;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 10px 15px 10px 10px;
+            /* border: 1px solid red; */
+        }
+
+        .wrapper .form-field select {
+            width: 100%;
+            display: block;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 10px 15px 10px 10px;
+        }
+
+        .wrapper .form-field {
+            padding-left: 10px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+        }
+
+            .wrapper .form-field .fas {
+                color: #555;
+            }
+
+        .wrapper .btn {
+            box-shadow: none;
+            width: 100%;
+            height: 40px;
+            background-color: #6B2710;
+            color: #fff;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+            letter-spacing: 1.3px;
+        }
+
+            .wrapper .btn:hover {
+                color: #f7c641;
+                text-shadow: 5px 10px 10px #555, -3px 10px 12px #555;
+            }
+
+        .wrapper a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: #03A9F4;
+        }
+
+            .wrapper a:hover {
+                color: #039BE5;
+            }
+
+        @@media(max-width: 380px) {
+            .wrapper {
+                margin: 30px 20px;
+                padding: 40px 15px 15px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #E1DAC6;">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">Tri-Wall</a>
+
+            <!-- Menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Dashboard" asp-action="DashboardSaleAR">Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Dashboard" asp-action="DashboardPurchasingAP">Purchase</a>
+                    </li>
+                </ul>
+
+                <div class="dropdown vcenter-item" id="tagLogin">
+                    <i style='font-size:28px' class='fas'>&#xf2bd;</i>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    @*<label id="fullname" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">123</label>*@
+                <ul class="dropdown-menu" aria-labelledby="fullname">
+                    <li><a class="dropdown-item text-01">Position : <label id="lbPosition"></label></a></li>
+                    <li><a class="dropdown-item text-01">Departmant : <label id="lbDept"></label></a></li>
+                    <li><a class="dropdown-item text-01">Email : <label id="lbEmail"></label></a></li>
+                </ul><button id="btnLogout" class="btn btn-danger">Logout</button>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+@* Login Form *@
+<div id="frmLogin" class="modal-2">
+
+    @*<form class="modal-content-2 animate" method="post"></form>*@
+
+    <div class="wrapper">
+        <div class="logo">
+            <img src="~/Icon/Logo/Tri-Wall/Logo-1.png" />
+        </div>
+        <div class="text-center mt-4 name">
+            Tri-Wall
+        </div>
+
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="txtuname" id="uname" placeholder="Username" autocomplete="off" value="admin1">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="txtpsw" id="psw" placeholder="Password" value="123">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-circle-check"></span>
+                <select id="ddl_dept">
+                </select>
+            </div>
+            <button class="btn mt-3" id="btnLogin">Login</button>
+        @*<div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div>*@
+    </div>
+
+</div>    
+
+    
+
+@* #XXX *@
+<script src="~/js/libDatan.js"></script>
+<script type="text/javascript">
+
+    //variable
+    var empId = "";
+    var firstName = "";
+    var lastName = "";
+    var email = "";
+    var position = "";
+    var section = "";
+    var departmant = "";
+
+    if (getCookie("emp_username") != '') {
+        document.getElementById("frmLogin").style.display = "none";
+        document.getElementById("tagLogin").style.display = "block";
+        document.getElementById("dropdownMenuButton1").innerHTML = getCookie("emp_fname") + " " + getCookie("emp_lname");
+        document.getElementById("lbEmail").innerHTML = getCookie("emp_email");
+        document.getElementById("lbDept").innerHTML = getCookie("emp_departmant");
+        document.getElementById("lbPosition").innerHTML = getCookie("emp_position");
+
+    } else {        
+        document.getElementById("frmLogin").style.display = "block";
+        document.getElementById("tagLogin").style.display = "none";
+        $('#uname').focus();
+    }
+
+
+    for(x in dept ){
+      var sel = document.createElement("option");
+      sel.innerHTML = dept[x].deptName;
+      sel.value  = dept[x].deptName;
+      document.getElementById("ddl_dept").appendChild(sel);
+    }
+
+    var entertxtUsername = document.getElementById("uname");
+    entertxtUsername.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("psw").focus();
+        }
+    });
+
+    var entertxtPsw = document.getElementById("psw");
+    entertxtPsw.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("btnLogin").click();
+        }
+    });
+
+
+    //Load();
+    var arrUser = [];
+    @*function Load() {
+
+    if (this.data === undefined) { return }
+    $.ajax({
+    url: '@Url.Action("GetEmployeeLogin", "Home")',
+    data: { username: $('#uname').val(), passw0rd: $('#psw').val() },
+    type: 'GET',
+    dataType: 'JSON',
+    success: function (data) {
+    console.log(data)
+    //arrUser = data.data;
+    }
+    });
+    }*@
+
+    function chkUserPass(_username, _passw0rd) {
+        //===============
+        //console.log(_username + "++" + _passw0rd);
+        $.ajax({
+            type: "GET",
+            url: "@Url.Action("GetEmployeeLogin", "Home")",
+            data: { username: _username, passw0rd: _passw0rd },
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            dataSrc: 'data',
+            success: function (val) {
+                console.log(val);
+                var iLength = 0;
+                iLength = val.data.length;
+                if (iLength != 0) {
+                    jqueryXml = $(val);
+                    //console.log(jqueryXml);
+
+                    empId = jqueryXml[0].data[0].empId;
+                    firstName = jqueryXml[0].data[0].firstName;
+                    lastName = jqueryXml[0].data[0].lastName;
+                    email = jqueryXml[0].data[0].email;
+                    position = jqueryXml[0].data[0].position;
+                    section = "";//jqueryXml[0].data[0].section;
+                    departmant = "";//jqueryXml[0].data[0].departmant
+                    //console.log(empId + ";" + firstName + ";" + lastName + ";" + email + ";" + position + ";" + section + ";" + departmant);
+
+                    setCookie(empId, email, firstName, lastName, position, section, departmant, 1);
+                    location.reload();
+                }
+                else if (iLength == 0) {
+                    alert('Username หรือ Password ไม่ถูกต้อง');
+                    $('#psw').val('').focus();
+                    //location.reload();
+                }
+                
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+        //===============
+    }
+
+    $("#btnLogin").click(function () {
+        //alert("Logining...");
+        var inflength = 0;
+        //alert('Logining...');
+        if ($('#uname').val() == "" && $('#psw').val() == "") {
+            alert('กรุณาใส่ Username และ Password');
+        }
+        else {
+            var uname = $('#uname').val();
+            var psw = $('#psw').val();
+            chkUserPass(uname,psw);
+        }
+    });
+
+    function setCookie(cuname, cemail, cfname, clname, cposition, csection, cdepartmant, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var emp_username = "emp_username=" + cuname + ";";
+        var emp_email = "emp_email=" + cemail + ";";
+        var emp_fname = "emp_fname=" + cfname + ";";
+        var emp_lname = "emp_lname=" + clname + ";";
+        var emp_position = "emp_position=" + cposition + ";";
+        var emp_section = "emp_section=" + csection + ";";
+        var emp_departmant = "emp_departmant=" + cdepartmant + ";";
+
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = emp_username + expires + ";path=/";
+        document.cookie = emp_email + expires + ";path=/";
+        document.cookie = emp_fname + expires + ";path=/";
+        document.cookie = emp_lname + expires + ";path=/";
+        document.cookie = emp_position + expires + ";path=/";
+        document.cookie = emp_section + expires + ";path=/";
+        document.cookie = emp_departmant + expires + ";path=/";
+        //+ emp_email + emp_fname + emp_lname + emp_position + emp_section + emp_departmant
+
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+
+        $('#btnLogout').click(function () {
+            console.log('Logout');
+            document.cookie = "emp_username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_fname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_lname=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_position=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_section=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "emp_departmant=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            //location.reload();
+            window.location.href = "@Url.Action("Index", "Home")";
+        });
+
+</script>
+@RenderSection("Scripts", false)
+</body>
+</html>

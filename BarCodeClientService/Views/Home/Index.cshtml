@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    @*<div align="center" style="font-size:55px; font-weight:bolder; text-shadow: #808080 1px 1px">Barcode System</div>*@
+    @*<div id="getStatus">...</div>*@
+    <div class="row">
+
+        @*<div class="home_welcome">
+            <h1>Welcome to Sale & Purchase</h1>
+        </div>*@
+
+
+        <div class="col-lg-3" style="width: 250px;height: 250px;margin-top:30px;">
+            <a asp-controller="PdfFiles" asp-action="FrmUploadViewPdf">
+                <div style="width:100%;height:100%;background:#f0eff1">
+                    <div style="text-align:center">
+                        <p style="text-align:center;padding-top:15px;"><b>Upload/View PDF</b></p>
+                    </div>
+                    <div style="width:100%;height:100%;text-align:center">
+                        <i id="Icon" class="fas fa-file-medical" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3" style="width: 250px;height: 250px;margin-top:30px;">
+            <a asp-controller="Drawing" asp-action="CreateDrawing">
+                <div style="width:100%;height:100%;background:#f0eff1">
+                    <div style="text-align:center">
+                        <p style="text-align:center;padding-top:15px;"><b>Create Drawing</b></p>
+                    </div>
+                    <div style="width:100%;height:100%;text-align:center">
+                        <i id="Icon" class="fas fa-file-medical" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        @*<div class="col-lg-3" style="width: 250px;height: 250px;margin-top:30px;">
+            <a href="#" onclick="test2()">
+                <div style="width:100%;height:100%;background:#f0eff1">
+                    <div style="text-align:center">
+                        <p style="text-align:center;padding-top:15px;">Sale A/R</p>
+                    </div>
+                    <div style="width:100%;height:100%;text-align:center">
+                        <i id="Icon" class="fas fa-file-medical" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3" style="width: 250px;height: 250px;margin-top:30px;">
+            <a href="#" onclick="POSTDataAPI()">
+                <div style="width:100%;height:100%;background:#f0eff1">
+                    <div style="text-align:center">
+                        <p style="text-align:center;padding-top:15px;">POST DATA to Web API</p>
+                    </div>
+                    <div style="width:100%;height:100%;text-align:center">
+                        <i id="Icon" class="fas fa-file-medical" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </a>
+        </div>*@
+    </div>
+</div>
+
+@*<script>
+        function test1() {
+            $.ajax({
+            url: '@Url.Action("GetAPITesting", "Home")',
+            type: "GET",
+            //data: { ItemCode: Items },
+            dataType: "JSON",
+                beforeSend: function () {
+
+                        //$('#Modalloder').modal('show');
+            },
+            success: function (data) {
+                console.log(data);
+                if (data.errorCode == 0) {
+                    alert("I can get Data from Restful Service");
+                } else {
+                    alert("Oppp Maybe Internal Error Look Like this:" + data.errorMessage);
+                }
+            }
+        });
+        }
+
+        //function GetDataConfig() { }
+            $.ajax({
+            url: '@Url.Action("GetDataConfig", "Home")',
+            type: "GET",
+            dataType: "JSON",
+                success: function (data) {
+                    //START -> Check Error [Cannot read properties of undefined]
+                    if (data !== undefined) {
+                        var jqueryXml = $(data);
+                        if (jqueryXml[0].errorCode != 0) {
+                            console.log("DbName -> " + jqueryXml[0].data[0].companyDB);
+                            console.log("User -> " + jqueryXml[0].data[0].userNameSAP);
+                            console.log("Error");
+                            document.getElementById("getStatus").innerHTML = "Status : Offline <br> Msg : " + jqueryXml[0].errorMessage;
+                            document.getElementById("getStatus").style.color = "Red";
+                            document.getElementById("getStatus").style.fontWeight = "Bold";
+                        } else {
+                            console.log("DbName -> " + jqueryXml[0].data[0].companyDB);
+                            console.log("User -> " + jqueryXml[0].data[0].userNameSAP);
+                            console.log("Connected");
+                            document.getElementById("getStatus").innerHTML = "Status : Online";
+                            document.getElementById("getStatus").style.color = "Green";
+                            document.getElementById("getStatus").style.fontWeight = "Bold";
+                        }
+                    }
+                    else {
+                        fncErr();
+                    }
+                    //END -> Check Error [Cannot read properties of undefined]
+
+
+                },
+                error: function (err) {
+                    console.log(err.responseText);
+                }
+        });
+
+        function fncErr() {
+            //alert("Server error responses\r\nเกิดข้อผิดพลาดของเซิร์ฟเวอร์");
+            document.getElementById("getStatus").innerHTML = "Status : Offline";
+            document.getElementById("getStatus").style.color = "Red";
+            document.getElementById("getStatus").style.fontWeight = "Bold";
+        }
+    </script>*@

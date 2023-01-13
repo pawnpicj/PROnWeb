@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Platforms>AnyCPU;ARM32</Platforms>
+		<Nullable>warnings</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<PlatformTarget>x86</PlatformTarget>
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM32'">
+		<PlatformTarget>x64</PlatformTarget>
+		<Optimize>True</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="wwwroot\Images\sBank.png" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+    <PackageReference Include="Aspose.BarCode" Version="22.10.0" />
+    <PackageReference Include="Aspose.PDF" Version="22.11.0" />
+    <PackageReference Include="BarCode" Version="2022.10.9871" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.11.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.11.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="Rotativa" Version="1.7.3" />
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BarCodeAPIService\BarCodeAPIService.csproj" />
+    <ProjectReference Include="..\Barcodesystem\BarCodeLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Signatures\" />
+    <Folder Include="wwwroot\Images\Signatures\" />
+    <Folder Include="wwwroot\UploadPDF\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\sBank.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SAPBusinessOneSDK">
+      <HintPath>..\SAP API DI\v10\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

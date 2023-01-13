@@ -1,0 +1,227 @@
+﻿body {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.a1 {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    cursor:pointer;
+
+}
+
+.blink {
+    width: 200px;
+    height: 200px;
+    padding: 28px 16px;
+    text-decoration: none;
+    color: #555;
+    text-shadow: 1px 1px #ffffff;
+}
+
+    .blink:hover {
+        color: #e74c3c;
+    }
+
+.home_welcome {
+    padding: 28px 16px;
+}
+
+.logotitle {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px #000000;
+}
+
+.topColor {
+    background: #CD7F32;
+}
+
+
+/* TOP NAV */
+.topnav {
+    overflow: hidden;
+    background-color: #CD7F32;
+}
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+i.icon-2x {
+    font-size: 50px;
+}
+
+.color-light {
+    color: #FFFFFF;
+}
+
+.color-dark {
+    color: #555;
+}
+
+.p-box {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.modal-2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content-2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    /* width: 30%; Could be more or less, depending on screen size */
+    min-width: 30%;
+    max-width: 35%;
+    border-radius: 5px;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+/*Colored Content Boxes
+------------------------------------*/
+.servive-block {
+    padding: 30px 35px;
+    height: 180px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: #555 5px 5px;
+}
+
+    .servive-block p,
+    .servive-block h2 {
+        
+    }
+
+        .servive-block h2 a:hover {
+            text-decoration: none;
+        }
+
+.servive-block-light,
+.servive-block-default {
+    background: #fafafa;
+    border: solid 1px #eee;
+}
+
+    .servive-block-default:hover {
+        box-shadow: 0 0 8px #eee;
+    }
+
+    .servive-block-light p,
+    .servive-block-light h2,
+    .servive-block-default p,
+    .servive-block-default h2 {
+        color: #555;
+    }
+
+.servive-block-u {
+    background: #72c02c;
+}
+
+.servive-block-blue {
+    background: #3498db;
+}
+
+.servive-block-red {
+    background: #e74c3c;
+}
+
+.servive-block-sea {
+    background: #1abc9c;
+}
+
+.servive-block-grey {
+    background: #95a5a6;
+}
+
+.servive-block-yellow {
+    background: #fbeaa7;
+}
+
+.servive-block-orange {
+    background: #e67e22;
+}
+
+.servive-block-green {
+    background: #2ecc71;
+}
+
+.servive-block-purple {
+    background: #9b6bcc;
+}
+
+.servive-block-aqua {
+    background: #27d7e7;
+}
+
+.servive-block-brown {
+    background: #9c8061;
+}
+
+.servive-block-dark-blue {
+    background: #4765a0;
+}
+
+.servive-block-light-green {
+    background: #79d5b3;
+}
+
+.servive-block-dark {
+    background: #555;
+}
+
+.servive-block-light {
+    background: #ecf0f1;
+}
+
+
+.vcenter-item {
+    display: flex;
+    align-items: center;
+}
+
+.text-01{
+    font-weight:bold;
+    font-size:14px;
+}
