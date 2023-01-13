@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VCX157eubQzqWwpMXH7w8EM+ScIpp5T/wH/tSiRwFo0A8AuUYBAlpW3lWiVGqVd+F51nQVYrLyFN31Pf95IbKA==",
+  "dgSpecHash": "7MGV2jWtdgPATTSU1p4uvsmdScZVwiOX5069jH7+Jr0dYS1gnam9fbB5FAKLzYqb1TQGSjT65xz0+OfMlLZf/g==",
   "success": true,
-  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\BarCodeClientService\\BarCodeClientService.csproj",
+  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\BarCodeClientService\\BarCodeClientService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User01\\.nuget\\packages\\aspose.barcode\\22.10.0\\aspose.barcode.22.10.0.nupkg.sha512",
     "C:\\Users\\User01\\.nuget\\packages\\aspose.pdf\\22.11.0\\aspose.pdf.22.11.0.nupkg.sha512",

@@ -10043,11 +10043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\BarCodeAPIService\\BarCodeAPIService.csproj",
+      "projectUniqueName": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\BarCodeAPIService\\BarCodeAPIService.csproj",
       "projectName": "BarCodeAPIService",
-      "projectPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\BarCodeAPIService\\BarCodeAPIService.csproj",
+      "projectPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\BarCodeAPIService\\BarCodeAPIService.csproj",
       "packagesPath": "C:\\Users\\User01\\.nuget\\packages\\",
-      "outputPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\BarCodeAPIService\\obj\\",
+      "outputPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\BarCodeAPIService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User01\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10064,8 +10064,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\Barcodesystem\\BarCodeLibrary.csproj": {
-              "projectPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\Barcodesystem\\BarCodeLibrary.csproj"
+            "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\Barcodesystem\\BarCodeLibrary.csproj": {
+              "projectPath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\Barcodesystem\\BarCodeLibrary.csproj"
             }
           }
         }

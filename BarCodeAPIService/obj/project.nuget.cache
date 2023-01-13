@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "alFhYIu45hMBhPdaaS/57jkzUNfSyRqxISUqcLBgaOukcyiCu5NK4t+UYXZjPuVoigVHDUB9+FYsys6fr/EkgQ==",
+  "dgSpecHash": "qYBnNzDoETS1JuHB/G7Si48Xk8QEZuImpPy6PhAUQohC2RNqlfyRdOhGzPjlj//yvQamjE3X27QLtXvFp0K+5Q==",
   "success": true,
-  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\BarCodeAPIService\\BarCodeAPIService.csproj",
+  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\BarCodeAPIService\\BarCodeAPIService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User01\\.nuget\\packages\\bouncycastle.cryptography\\2.0.0\\bouncycastle.cryptography.2.0.0.nupkg.sha512",
     "C:\\Users\\User01\\.nuget\\packages\\clrheapallocationanalyzer\\3.0.0\\clrheapallocationanalyzer.3.0.0.nupkg.sha512",

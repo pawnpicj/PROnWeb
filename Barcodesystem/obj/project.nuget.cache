@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MfkuQ2mqvOmxET93lVZQ1iLkp1eB4Chbs9Wd64bgBW214NU7w6JKMoIejunFB+xZWFJSI0Uu8+3PqMj7FqUfLw==",
+  "dgSpecHash": "6/09w43slQChAnuZQEouLbEtlbM6x1k1KgjLLQ+kSRLzZBY8ZNyjlw6L1Vqkjg+Tac+0dsgThP/TLNCQgOHqHA==",
   "success": true,
-  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\BarCode-System\\Barcodesystem\\BarCodeLibrary.csproj",
+  "projectFilePath": "D:\\Tri-Wall\\OnWeb\\BarCode-System_Current\\pawnpicj\\PROnWeb\\Barcodesystem\\BarCodeLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User01\\.nuget\\packages\\clrheapallocationanalyzer\\3.0.0\\clrheapallocationanalyzer.3.0.0.nupkg.sha512",
     "C:\\Users\\User01\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.0.1\\microsoft.aspnetcore.antiforgery.2.0.1.nupkg.sha512",
